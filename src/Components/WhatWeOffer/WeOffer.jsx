@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import dataOffer  from "../../data";
+// import dataOffer  from "../../data";
 import OfferCard from "../Offer/Offer";
 
 
@@ -27,7 +27,7 @@ const WeOffer = () => {
  );
 };
 
-const Offerings = styled.main`
+const Offerings = styled.section`
  background-color: white;
  margin: 3rem 5rem;
 

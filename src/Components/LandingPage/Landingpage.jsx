@@ -48,7 +48,7 @@ const LandingPage = styled.main`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1.5px solid;
+  border-bottom: 2.5px solid;
   border-color: white;
   font-family: "DM Sans", sans-serif;
   font-size: 1.2rem;

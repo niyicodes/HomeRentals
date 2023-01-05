@@ -1,5 +1,6 @@
 import React from 'react'
 import LandingPage from '../Components/LandingPage/Landingpage'
+import Properties from '../Components/Properties/Properties'
 import WeOffer from '../Components/WhatWeOffer/WeOffer'
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <div>
      <LandingPage />
      <WeOffer />
+     <Properties />
     </div>
   )
 }
