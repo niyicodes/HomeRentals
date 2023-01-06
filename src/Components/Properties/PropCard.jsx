@@ -3,27 +3,27 @@ import styled from "styled-components";
 import prop1 from "/img/prop1.jpg";
 import { MdOutlineKingBed, MdOutlineBathtub } from "react-icons/md";
 import { CgHashtag } from "react-icons/cg";
-const PropCard = ({ name, type, image, price }) => {
+const PropCard = ({ name, hometype, image, price, bed, bath, squarefeet, id }) => {
  return (
   <PropertiesCard>
    <img src={prop1} alt="" />
    <div className="propdetails">
-    <p className="prop-name">2578 Folsom street, san francisco, CA, 94110</p>
-    <small className="prop-type">Private Room</small>
-    <h4 className="prop-price">$1200/month</h4>
+    <p className="prop-name">{name}</p>
+    <small className="prop-type">{hometype}</small>
+    <h4 className="prop-price">{price}/month</h4>
    </div>
    <div className="prop-features">
     <div className="feature">
      <MdOutlineKingBed />
-     <p>4</p>
+     <p>{bed}</p>
     </div>
     <div className="feature">
      <MdOutlineBathtub />
-     <p>3</p>
+     <p>{bath}</p>
     </div>
     <div className="feature">
      <CgHashtag />
-     <p>2</p>
+     <p>{squarefeet}</p>
     </div>
    </div>
   </PropertiesCard>

@@ -3,8 +3,9 @@ import styled from "styled-components";
 import Button from "../Button/Button";
 import PropCard from "./PropCard";
 import Paginate from '../Paginate/Paginate'
+import property from "./property";
 
-const Properties = ({ properties }) => {
+const Properties = () => {
  return (
   <Prop>
    <div className="top">
@@ -14,14 +15,13 @@ const Properties = ({ properties }) => {
     <Button name="View all property" />
    </div>
    <main className="properties">
-    <PropCard />
-    <PropCard />
-    <PropCard />
-    <PropCard />
-    <PropCard />
-    <PropCard />
-    <PropCard />
-    <PropCard />
+    {
+     property.map(({ name, hometype, image, price, bed, bath, squarefeet, id }) => {
+      return(
+       <PropCard key={id} name={name} hometype={hometype} price={price} bed={bed} bath={bath} squarefeet={squarefeet}/>
+      )
+     })
+    }
     
     {/* <Paginate properties={properties} /> */}
    </main>
