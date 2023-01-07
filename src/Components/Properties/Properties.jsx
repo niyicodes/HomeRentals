@@ -1,11 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../Button/Button";
 import PropCard from "./PropCard";
-import Paginate from '../Paginate/Paginate'
+import ReactPaginate from "react-paginate";
 import property from "./property";
 
 const Properties = () => {
+ const [properties, setProperties] = useState(property.slice(0, 16));
+ const [pageNumber, setPageNumber] = useState(0);
+ const propertyPerPage = 8;
+ const pagesVisited = pageNumber * propertyPerPage;
+
+ const displayProperties = properties
+  .slice(pagesVisited, pagesVisited + propertyPerPage)
+  .map(({ name, hometype, image, price, bed, bath, squarefeet, id }) => {
+   return (
+    <PropCard
+     key={id}
+     name={name}
+     hometype={hometype}
+     price={price}
+     bed={bed}
+     bath={bath}
+     squarefeet={squarefeet}
+    />
+   );
+  });
+
+ const pageCount = Math.ceil(properties.length / propertyPerPage);
+ // onPageChange
+ const handlePageChange = ({ selected }) => {
+  setPageNumber(selected);
+ };
  return (
   <Prop>
    <div className="top">
@@ -15,15 +41,20 @@ const Properties = () => {
     <Button name="View all property" />
    </div>
    <main className="properties">
-    {
-     property.map(({ name, hometype, image, price, bed, bath, squarefeet, id }) => {
-      return(
-       <PropCard key={id} name={name} hometype={hometype} price={price} bed={bed} bath={bath} squarefeet={squarefeet}/>
-      )
-     })
-    }
-    
-    {/* <Paginate properties={properties} /> */}
+    <div className="propertyarea">{displayProperties}</div>
+    <div className="paginationarea">
+     <ReactPaginate
+      breakLabel="..."
+      nextLabel="Next >"
+      onPageChange={handlePageChange}
+      pageRangeDisplayed={5}
+      pageCount={pageCount}
+      previousLabel="< Previous"
+      renderOnZeroPageCount={null}
+      containerClassName="paginationsBtn"
+      activeClassName="paginationActive"
+     />
+    </div>
    </main>
   </Prop>
  );
@@ -56,11 +87,45 @@ const Prop = styled.section`
   }
  }
  .properties {
-  display: grid;
-  grid-template-columns: repeat(4, 350px);
-  /* grid-column-gap: 1rem; */
-  grid-row-gap: 2.5rem;
-  margin: 2rem 5rem;
+  .propertyarea {
+   display: grid;
+   grid-template-columns: repeat(4, 350px);
+   grid-row-gap: 2.5rem;
+   margin: 2rem 5rem;
+  }
+  .paginationarea {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding: 2rem 0;
+   font-family: "Inter", sans-serif;
+   .paginationsBtn {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin: 0 auto;
+   }
+
+   .paginationsBtn a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 2px solid #E9E9E9;
+    color: #F4511E;
+    cursor: pointer;
+   }
+
+   .paginationsBtn a:hover {
+    color: white;
+    background-color: #F4511E;
+   }
+
+   .paginationActive a {
+    color: white;
+    background-color: #F4511E;
+   }
+  }
  }
 `;
 export default Properties;
