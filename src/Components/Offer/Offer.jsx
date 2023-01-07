@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const OfferCard = ({ img, text }) => {
+const OfferCard = ({ image, title }) => {
  return (
   <Card>
-   <img src="/img/money-dollar.png" alt="text" />
-   <p>tryingit out</p>
+   <img src={image} alt={title} />
+   <p>{title}</p>
   </Card>
  );
 };

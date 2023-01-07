@@ -6,11 +6,15 @@ import ReactPaginate from "react-paginate";
 import property from "./property";
 
 const Properties = () => {
+ // a state to store the properties
  const [properties, setProperties] = useState(property.slice(0, 16));
  const [pageNumber, setPageNumber] = useState(0);
+ // number of properties to be displayed 
  const propertyPerPage = 8;
+ // to determine the number of properties displayed or to be displayed
  const pagesVisited = pageNumber * propertyPerPage;
 
+ // Function to display the properties on press of the pagination button
  const displayProperties = properties
   .slice(pagesVisited, pagesVisited + propertyPerPage)
   .map(({ name, hometype, image, price, bed, bath, squarefeet, id }) => {
@@ -18,6 +22,7 @@ const Properties = () => {
     <PropCard
      key={id}
      name={name}
+     image={image}
      hometype={hometype}
      price={price}
      bed={bed}

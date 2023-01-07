@@ -1,7 +1,8 @@
 const properties = [
  {
   id: "1",
-  image: "",
+  image:
+   "https://images.unsplash.com/photo-1629236714859-3a1ec2d8f6c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80",
   name: "2202 E Stayton Ave, Victoria, TX 77901",
   hometype: "Single family",
   price: "$1,195",
@@ -11,7 +12,8 @@ const properties = [
  },
  {
   id: "2",
-  image: "",
+  image:
+   "https://images.unsplash.com/photo-1628133287836-40bd5453bed1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cmVhbCUyMGVzdGF0ZSUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
   name: "5803 Alexandria Dr, Temple, TX 76502",
   hometype: "Single family",
   price: "$1,650",
@@ -21,7 +23,7 @@ const properties = [
  },
  {
   id: "3",
-  image: "",
+  image: "https://media.istockphoto.com/id/1284097677/photo/colonial-style-house.jpg?s=612x612&w=0&k=20&c=kZEEFLZeD9f4iSUyb1zY1_wv2XfpncoG1KOOl1FKDcI=",
   name: "302A Vivelle Ave, Nashville, TN 37210",
   hometype: "Townhomes",
   price: "$3,700",
@@ -31,7 +33,7 @@ const properties = [
  },
  {
   id: "4",
-  image: "",
+  image: "https://images.unsplash.com/photo-1628624747186-a941c476b7ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHJlYWwlMjBlc3RhdGUlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60",
   name: "Mesa Ridge, # 10-105, 7765 Pitcher Pt, Fountain, CO 80817",
   hometype: "Apartment",
   price: "$1,535",
@@ -41,7 +43,7 @@ const properties = [
  },
  {
   id: "5",
-  image: "",
+  image: "https://images.unsplash.com/photo-1629236714791-f4daf62fdcd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHJlYWwlMjBlc3RhdGUlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60",
   name: "16th St, Jersey City, NJ 07310",
   hometype: "Apartment",
   price: "$2,600",
@@ -51,7 +53,7 @@ const properties = [
  },
  {
   id: "6",
-  image: "",
+  image: "https://images.unsplash.com/photo-1594540992254-0e2239661647?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHJlYWwlMjBlc3RhdGUlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60",
   name: "1848 Fairfax Ave, Cincinnati, OH 45207",
   hometype: "Single family",
   price: "$2,650",
@@ -61,7 +63,7 @@ const properties = [
  },
  {
   id: "7",
-  image: "",
+  image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJlYWwlMjBlc3RhdGUlMjBwaG90b2dyYXBoeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1000&q=60",
   name: "701 Betula Ave, Cincinnati, OH 45229",
   hometype: "Single family",
   price: "$2,600",
@@ -71,7 +73,7 @@ const properties = [
  },
  {
   id: "8",
-  image: "",
+  image: "https://media.istockphoto.com/id/1145010435/photo/mediterranean-villa-with-swimming-pool.jpg?b=1&s=170667a&w=0&k=20&c=Y55q-0Bq9XuQ7UFmJUHsf7LpZttd_o2x0tZBojW2XNM=",
   name: "5803 Alexandria Dr, Temple, TX 76502",
   hometype: "Single family",
   price: "$1,650",
@@ -81,7 +83,7 @@ const properties = [
  },
  {
   id: "9",
-  image: "",
+  image: "https://media.istockphoto.com/id/1151466505/photo/canadian-house-in-beaconsfield-montreal-quebec-canada.jpg?s=612x612&w=0&k=20&c=Ukz1RL1nNfkZec5CcYOL1sUWHunEYz4wqai3YTwSNZ0=",
   name: "302A Vivelle Ave, Nashville, TN 37210",
   hometype: "Townhomes",
   price: "$3,700",
@@ -91,7 +93,7 @@ const properties = [
  },
  {
   id: "10",
-  image: "",
+  image: "https://media.istockphoto.com/id/1156192691/photo/suburban-house.jpg?s=612x612&w=0&k=20&c=qWOc3hY5sZphs3IabtE3msxLO9W6GJfCJYKoxzYXSQQ=",
   name: "1848 Fairfax Ave, Cincinnati, OH 45207",
   hometype: "Single family",
   price: "$2,650",
@@ -101,7 +103,7 @@ const properties = [
  },
  {
   id: "11",
-  image: "",
+  image: "https://media.istockphoto.com/id/1222428750/photo/aerial-view-of-a-modern-american-craftsman-style-house-exterior.jpg?s=612x612&w=0&k=20&c=nWtmnnLWcXpJ9frhPhn6MjfXG-vskZKka0a62IXYZFI=",
   name: "701 Betula Ave, Cincinnati, OH 45229",
   hometype: "Single family",
   price: "$2,600",
@@ -111,7 +113,7 @@ const properties = [
  },
  {
   id: "12",
-  image: "",
+  image: "https://media.istockphoto.com/id/1272163106/photo/large-house-with-steep-roof-and-side-entry-three-car-garage.jpg?s=612x612&w=0&k=20&c=zCHxziqhujITjR0IMoCPFxFDPypIs6fMgpKdYHKWzaA=",
   name: "Mesa Ridge, # 10-105, 7765 Pitcher Pt, Fountain, CO 80817",
   hometype: "Apartment",
   price: "$1,535",
@@ -121,7 +123,7 @@ const properties = [
  },
  {
   id: "13",
-  image: "",
+  image: "https://media.istockphoto.com/id/1367954158/photo/residential-district-with-luxury-villas-walking-path-and-palm-trees.jpg?s=612x612&w=0&k=20&c=jN_Wvd5rM9m4hnHO724DFxEeSuKknzM0dWKZY9Hp118=",
   name: "16th St, Jersey City, NJ 07310",
   hometype: "Apartment",
   price: "$2,600",
@@ -131,7 +133,7 @@ const properties = [
  },
  {
   id: "14",
-  image: "",
+  image: "https://media.istockphoto.com/id/1256023751/photo/beautiful-new-home-with-big-front-porch-and-entry.jpg?s=612x612&w=0&k=20&c=F85sCh1MTrxp0Um-fR9Y6_KopPYCuZJXzkCLbGsJkg4=",
   name: "4069 Walton Creek Rd, Columbia Township, OH 45227",
   hometype: "Apartment",
   price: "$2,100",
@@ -141,7 +143,7 @@ const properties = [
  },
  {
   id: "15",
-  image: "",
+  image: "https://media.istockphoto.com/id/1396856251/photo/colonial-house.jpg?s=612x612&w=0&k=20&c=_tGiix_HTQkJj2piTsilMuVef9v2nUwEkSC9Alo89BM=",
   name: "Mesa Ridge, # 10-105, 7765 Pitcher Pt, Fountain, CO 80817",
   hometype: "Apartment",
   price: "$1,535",
@@ -151,7 +153,7 @@ const properties = [
  },
  {
   id: "16",
-  image: "",
+  image: "https://media.istockphoto.com/id/1303750024/photo/modern-backyard-firepit-with-patio-furniture-real-estate-back-exterior-blue-and-white-with.jpg?s=612x612&w=0&k=20&c=g0zg8uu5x9Ow7bLyolM0C0VpHoBHRAgmIBRTPshTYq4=",
   name: "16th St, Jersey City, NJ 07310",
   hometype: "Apartment",
   price: "$2,600",
@@ -161,7 +163,7 @@ const properties = [
  },
  {
   id: "17",
-  image: "",
+  image: "https://media.istockphoto.com/id/1284635683/photo/red-and-gray-row-houses-in-suburbia.jpg?s=612x612&w=0&k=20&c=WAqeTnOcf2xZZpKy_jYezAJKt1kEmCayR2rEpPR5ezY=",
   name: "4069 Walton Creek Rd, Columbia Township, OH 45227",
   hometype: "Apartment",
   price: "$2,100",

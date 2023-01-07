@@ -3,10 +3,11 @@ import styled from "styled-components";
 import prop1 from "/img/prop1.jpg";
 import { MdOutlineKingBed, MdOutlineBathtub } from "react-icons/md";
 import { CgHashtag } from "react-icons/cg";
+
 const PropCard = ({ name, hometype, image, price, bed, bath, squarefeet, id }) => {
  return (
   <PropertiesCard>
-   <img src={prop1} alt="" />
+   <img src={image} alt="prop image" />
    <div className="propdetails">
     <p className="prop-name">{name}</p>
     <small className="prop-type">{hometype}</small>

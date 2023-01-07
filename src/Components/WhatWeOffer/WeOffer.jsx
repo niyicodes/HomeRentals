@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-// import dataOffer  from "../../data";
 import OfferCard from "../Offer/Offer";
+import offer from "./Offer";
 
 
 const WeOffer = () => {
@@ -15,12 +15,13 @@ const WeOffer = () => {
      <img src="/img/Hero.jpg" alt="" />
     </figure>
     <div className="details">
-     <OfferCard />
-     <OfferCard />
-     <OfferCard />
-     <OfferCard />
-     <OfferCard />
-     <OfferCard />
+     {
+      offer.map(({image, title}) => {
+       return(
+        <OfferCard image={image} title={title}/>
+       )
+      })
+     }
     </div>
    </div>
   </Offerings>
