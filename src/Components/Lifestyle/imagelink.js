@@ -1,0 +1,8 @@
+export const image1 = "https://media.istockphoto.com/id/1354885010/photo/shot-of-a-young-couple-dancing-together-in-their-kitchen.jpg?s=612x612&w=0&k=20&c=vbqAVyRKxhU6HuMKDSpxnnOmdFPJzUajeK9bcKzWTdw="
+export const title1 ="Flexible Leases"
+export const image2 = "https://media.istockphoto.com/id/1351718972/photo/our-home-will-be-full-of-love-and-happiness.jpg?s=612x612&w=0&k=20&c=zfw20obt_Ka8G2OS0juqGvhd0li1bgBqe8Lh3TQ_5LE="
+export const title2 ="Monthly House Cleaning"
+export const image3 = "https://media.istockphoto.com/id/1340711881/photo/father-and-daughter-having-fun.jpg?s=612x612&w=0&k=20&c=MN2w5VO4wnZSSS8uM33lveLlloPPNq6cHYR8wo7-RKQ="
+export const title3 ="7-Day Happiness Guaranteed"
+export const image4 = "https://media.istockphoto.com/id/1398116406/photo/a-woman-relaxing-surrounded-by-foliage-plants.jpg?s=612x612&w=0&k=20&c=LFH5pp3OklAJmLqvOpCb31DEXAbSlTex_GtFTBt6Muw="
+export const title4 ="Choose Your Own Roommate"

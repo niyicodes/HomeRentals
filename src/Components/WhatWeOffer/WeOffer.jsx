@@ -18,7 +18,7 @@ const WeOffer = () => {
      {
       offer.map(({image, title}) => {
        return(
-        <OfferCard image={image} title={title}/>
+        <OfferCard key={title} image={image} title={title}/>
        )
       })
      }
