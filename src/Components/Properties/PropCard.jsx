@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import prop1 from "/img/prop1.jpg";
 import { MdOutlineKingBed, MdOutlineBathtub } from "react-icons/md";
 import { CgHashtag } from "react-icons/cg";
 
