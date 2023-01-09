@@ -37,30 +37,59 @@ const Form = () => {
     </div>
     <div className="details">
     <div className="input">
-    <label htmlFor="unit">country</label>
-    <select name="" id="">
+    <label htmlFor="country">country</label>
+    <select name="country" id="country">
      <option value=""></option>
     </select>
     </div>
     <div className="input">
-    <label htmlFor="unit">state</label>
-    <select name="" id="">
+    <label htmlFor="state">state</label>
+    <select name="state" id="state">
      <option value=""></option>
     </select>
     </div>
     <div className="input">
-      <label htmlFor="unit">room type</label>
-      <select name="" id="">
+      <label htmlFor="room">room type</label>
+      <select name="room" id="room">
        <option value=""></option>
       </select>
      </div>
     </div>
-    <div className="details"></div>
+    <div className="">
+     <div id="description">
+     <label htmlFor="description">description</label>
+     <textarea name="description" id="description" cols="30" rows="10"></textarea>
+     </div>
+     <div id="upload">
+     <label htmlFor="upload">upload photos</label>
+
+     </div>
+    </div>
   </Forms>
  )
 }
 
 const Forms = styled.form`
+  .details{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1rem;
+   margin-bottom: 1rem;
+
+   .input{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+
+    input, select{
+     padding: .5rem 1rem;
+     font-size: 1.2rem;
+     background-color: #F9F9F9;
+     border: 2px solid #E6E6E6;
+     outline: none;
+    }
+   }
+  }
  
 `
 export default Form
