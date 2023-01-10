@@ -11,27 +11,27 @@ const Form = () => {
 
  // Initial state of property
  const [propertyDetails, setPropertyDetails] = useState({
-  Name: "",
+  fullName: "",
   address: "",
   unitNumber: "",
-  country: CountryNigeria,
+  country: '',
   state: NigeriaStates,
   roomType: "",
   price: "",
   description: "",
  });
- const handleInputChange = (e) => {
-  setPropertyDetails({
-   ...propertyDetails,
-   Name: e.target.value,
-   address: e.target.value,
-   unitNumber: e.target.value,
-   country: e.target.value,
-   state: e.target.value,
-   price: e.target.value,
-   description: e.target.value,
-  });
- };
+ // const handleInputChange = (e) => {
+ //  setPropertyDetails({
+ //   ...propertyDetails,
+ //   fullName: e.target.value,
+ //   address: e.target.value,
+ //   unitNumber: e.target.value,
+ //   country: CountryNigeria,
+ //   state: [...NigeriaStates],
+ //   price: e.target.value,
+ //   description: e.target.value,
+ //  });
+ // };
  // uploading a fle starts here
  // const [file, setFile] = useState(null);
  const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
@@ -57,8 +57,8 @@ const Form = () => {
       name=""
       id="fullname"
       placeholder="Enter name"
-      value={propertyDetails.Name}
-      onChange={handleInputChange}
+      value={propertyDetails.fullName}
+      onChange={(e)=>{setPropertyDetails({...propertyDetails, fullName: e.target.value})}}
      />
     </div>
     <div className="input">
@@ -69,7 +69,7 @@ const Form = () => {
       id="address"
       placeholder="Enter address"
       value={propertyDetails.address}
-      onChange={handleInputChange}
+      onChange={(e)=>{setPropertyDetails({...propertyDetails, address: e.target.value})}}
      />
     </div>
     <div className="input">
@@ -80,21 +80,23 @@ const Form = () => {
       id="unit"
       placeholder="Enter unit number"
       value={propertyDetails.unitNumber}
-      onChange={handleInputChange}
+      onChange={(e)=>{setPropertyDetails({...propertyDetails, unitNumber: e.target.value})}}
      />
     </div>
    </div>
    <div className="details">
     <div className="input">
      <Label name={"country"} />
-     <select name="country" id="country" onChange={handleInputChange}>
+     <select name="country" id="country" onChange={(e)=>{setPropertyDetails({...propertyDetails, country: e.target.value})}}>
       <option>{propertyDetails.country.name}</option>
      </select>
     </div>
     <div className="input">
      <Label name={"state"} />
-     <select name="state" id="state" value={propertyDetails.state}>
-      {myState.map(({ name, isoCode }) => {
+     <select name="state" id="state" value={propertyDetails.state} onChange={(e)=>{setPropertyDetails({...propertyDetails, state: e.target.value})}}>
+      
+      {myState.length > 0 && myState.map(({ name, isoCode }) => {
+       console.log(name)
        return (
         <option key={isoCode} value={name}>
          {name}
@@ -105,7 +107,7 @@ const Form = () => {
     </div>
     <div className="input">
      <Label name={"room type"} />
-     <select name="room" id="room" onChange={handleInputChange}>
+     <select name="room" id="room" onChange={(e)=>{setPropertyDetails({...propertyDetails, roomType: e.target.value})}}>
       <option value="private">private room</option>
       <option value="apartment">apartment</option>
       <option value="single">single room</option>
@@ -120,7 +122,7 @@ const Form = () => {
       id="description"
       placeholder="Enter description"
       rows="10"
-      onChange={handleInputChange}
+      onChange={(e)=>{setPropertyDetails({...propertyDetails, description: e.target.value})}}
      ></textarea>
     </div>
     <div id="upload">
