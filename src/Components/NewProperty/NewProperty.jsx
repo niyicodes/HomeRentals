@@ -22,20 +22,21 @@ font-family: "Inter", sans-serif;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 500;
-  margin: 1rem 0;
+  margin: 2rem 0;
   text-transform: capitalize;
  }
  .addaproperty {
-  margin:.5rem 5rem;
+  margin:2rem 5rem;
   -webkit-box-shadow: 0px 3px 15px 3px rgba(0,0,0,0.47); 
   box-shadow: 0px 3px 15px 3px rgba(0,0,0,0.47);
-  padding: 1.5rem 3rem;
+  padding: 2rem 3rem;
   h2{
    font-family: 'Poppins', sans-serif;
    font-size: 1.5rem;
    color: #F4511E;
    text-transform: capitalize;
    text-align: center;
+   padding-bottom: 1rem;
   }
  }
 `;
