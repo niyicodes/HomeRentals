@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-const Button = ({ name }) => {
- return <CustomButton>{name}</CustomButton>;
+const Button = ({ name, onClick }) => {
+ return <CustomButton onClick={onClick}>{name}</CustomButton>;
 };
 
 const CustomButton = styled.button`
  min-width: 130px;
- height: 40px;
+ /* height: 40px; */
  color: #fff;
- padding: 5px 10px;
+ /* padding: 5px 10px; */
  font-weight: bold;
  cursor: pointer;
  transition: all 0.3s ease;

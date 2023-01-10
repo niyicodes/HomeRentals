@@ -26,7 +26,7 @@ font-family: "Inter", sans-serif;
   text-transform: capitalize;
  }
  .addaproperty {
-  margin:2rem 5rem;
+  margin:4rem 5rem;
   -webkit-box-shadow: 0px 3px 15px 3px rgba(0,0,0,0.47); 
   box-shadow: 0px 3px 15px 3px rgba(0,0,0,0.47);
   padding: 2rem 3rem;
