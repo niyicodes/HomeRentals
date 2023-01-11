@@ -85,6 +85,7 @@ const Prop = styled.section`
   button {
    background-color: #f4511e;
    font-size: 1.2rem;
+   padding: .7rem 2rem;
    text-transform: capitalize;
    &:after {
     background-color: #23a6f0;

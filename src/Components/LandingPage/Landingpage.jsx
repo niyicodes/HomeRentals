@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "/img/logo.png";
+import Logo from "/img/homerentals.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
@@ -8,7 +8,9 @@ const Landingpage = () => {
  return (
   <LandingPage>
    <nav>
-    <img src={Logo} alt="" />
+    <Link to="/">
+      <img src={Logo} alt="" />
+    </Link>
     <ul className="nav-links">
      <li>
       <Link to="/" className="current">
@@ -54,7 +56,7 @@ const LandingPage = styled.main`
   font-size: 1.2rem;
   padding-bottom: 1rem;
   img {
-   height: 40px;
+    width: 120px;
   }
   .nav-links {
    display: flex;

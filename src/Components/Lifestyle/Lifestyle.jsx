@@ -84,6 +84,7 @@ const LifeStyle = styled.section`
    display: inline-block;
    background-color: #f4511e;
    color: white;
+   padding: .5rem 2rem;
    margin-top: 1.5rem;
    &:after {
     background-color: #e1a291;

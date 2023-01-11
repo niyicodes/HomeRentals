@@ -210,6 +210,9 @@ const Forms = styled.form`
    background-color: #f4511e;
    color: white;
    text-transform: capitalize;
+   &:after {
+    background-color: #e1a291;
+   }
   }
  }
 `;
