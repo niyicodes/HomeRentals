@@ -10,7 +10,7 @@ const Properties = () => {
  const [properties, setProperties] = useState(property.slice(0, 16));
  const [pageNumber, setPageNumber] = useState(0);
  // number of properties to be displayed 
- const propertyPerPage = 8;
+ const propertyPerPage = 6;
  // to determine the number of properties displayed or to be displayed
  const pagesVisited = pageNumber * propertyPerPage;
 
@@ -95,9 +95,11 @@ const Prop = styled.section`
  .properties {
   .propertyarea {
    display: grid;
-   grid-template-columns: repeat(4, 350px);
+   grid-template-columns: repeat(3, auto);
+   gap: 4rem;
    grid-row-gap: 2.5rem;
-   margin: 2rem 5rem;
+   place-content: center;
+   width: 100%;
   }
   .paginationarea {
    display: flex;
@@ -110,7 +112,7 @@ const Prop = styled.section`
     display: flex;
     align-items: center;
     align-self: center;
-    margin: 0 auto;
+    margin: 1rem auto;
    }
 
    .paginationsBtn a {

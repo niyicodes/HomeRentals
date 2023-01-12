@@ -13,7 +13,10 @@ const TextOnImage = ({image, title}) => {
 
 const AbsoluteText = styled.div`
  position: relative;
-
+ &:hover{
+  transform: scale(0.9);
+  z-index: 200;
+ }
  p{
   position: absolute;
   top: 10%;

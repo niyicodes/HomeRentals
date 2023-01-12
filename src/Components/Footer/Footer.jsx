@@ -97,7 +97,7 @@ const FooterComponent = styled.footer`
  flex-direction: column;
  justify-content: center;
  gap: 2rem;
- width: 90%;
+ width: 100%;
 
  .icons{
   color: #F4511E;
@@ -116,7 +116,7 @@ const FooterComponent = styled.footer`
  .top{
   display:flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   font-size: 1.2rem;
   border-top: 2px solid #F4511E;

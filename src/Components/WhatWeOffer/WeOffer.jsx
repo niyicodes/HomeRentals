@@ -47,18 +47,18 @@ const Offerings = styled.section`
   margin-top: 3rem;
   display: flex;
   flex-direction: row;
-  gap: 4rem;
+  gap: 2rem;
   figure {
-   width: 30%;
+   width: 40%;
    img {
-    width: 380px;
-    height: 450px;
+    width: 90%;
+    height: 100%;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
    }
   }
   .details {
-   width: 70%;
+   width: 60%;
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-row-gap: 5rem;

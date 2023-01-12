@@ -32,14 +32,19 @@ const PropCard = ({ name, hometype, image, price, bed, bath, squarefeet, id }) =
 
 const PropertiesCard = styled.div`
  position: relative;
- width: 280px;
- height: 400px;
+ width: 350px;
+ height: 450px;
  border-radius: 20px;
  border: none;
  outline: none;
  overflow: hidden;
  -webkit-box-shadow: 1px 2px 21px 0px rgba(0, 0, 0, 0.66);
  box-shadow: 1px 2px 21px 0px rgba(0, 0, 0, 0.66);
+ &:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  z-index: 300;
+ }
  img {
   width: 100%;
   object-fit: contain;
