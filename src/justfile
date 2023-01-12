@@ -1,3 +1,12 @@
 font-family: "Inter", sans-serif;
 font-family: 'DM Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
+
+
+1. For mobile devices: 320px to 480px
+
+2. For tablets and ipads: 481px to 768px
+
+3. For laptops: 769px to 1024px
+
+4. For desktops: 1025px to 1200px
