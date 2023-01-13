@@ -53,5 +53,12 @@ const TestimonialCard = styled.div`
    font-size: 1rem;
   }
  }
+ @media (min-width: 280px) and (max-width: 568px){
+  margin:1rem;
+
+  p{
+   line-height: 1.3;
+  }
+ }
 `
 export default TestiCard

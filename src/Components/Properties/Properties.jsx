@@ -135,5 +135,57 @@ const Prop = styled.section`
    }
   }
  }
+
+ /* for mobile landscape view */
+ @media (min-width: 280px) and (max-width: 480px){
+  .top{
+   flex-direction: column;
+   gap: 2rem;
+   justify-content: space-evenly;
+   margin-top: 1rem;
+   padding: 0.5rem;
+
+   h3{
+    line-height: 1.4;
+   }
+   button{
+    font-size: 0.6rem;
+    padding: 1rem;
+   }
+  }
+  .properties{
+   .propertyarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+   }
+  }
+ }
+
+  /* for tablets and landscape view */
+  @media (min-width: 481px) and (max-width: 930px){
+   .properties{
+    .propertyarea{
+     display: grid;
+     grid-template-columns: repeat(2, auto);
+     gap: 1rem;
+     place-items: center;
+    }
+   }
+  }
+
+  @media (min-width: 931px) and (max-width: 1200px){
+   .properties{
+    .propertyarea{
+     grid-template-columns: repeat(3, auto);
+     gap: .5rem;
+     grid-row-gap: 1.5rem;
+     place-items: center;
+     /* width: 95%; */
+    }
+   }
+  }
 `;
 export default Properties;

@@ -19,13 +19,14 @@ const AbsoluteText = styled.div`
  }
  p{
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   font-weight: 500;
  }
  img{
+  image-rendering: pixelated;
   filter: brightness(70%);
  }
 `

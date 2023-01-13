@@ -32,5 +32,17 @@ const Testimonials = styled.section`
  .testimonial-video{
   width: 50%;
  }
+
+ @media (min-width: 280px) and (max-width: 568px){
+  flex-direction: column;
+  height: 100%;
+
+  .testimonial-text{
+   width: 100%;
+  }
+  .testimonial-video{
+  width: 100%;
+ }
+ }
 `;
 export default Testimonial;

@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Button from "../Button/Button";
 import TextOnImage from "../TextOnImage/TextOnImage";
 import {image1, image2, image3, image4, title1, title2, title3, title4} from './imagelink'
+
+
 const Lifestyle = () => {
  return (
   <LifeStyle>
@@ -88,6 +90,34 @@ const LifeStyle = styled.section`
    margin-top: 1.5rem;
    &:after {
     background-color: #e1a291;
+   }
+  }
+ }
+
+ /* for mobile landscape view */
+ @media (min-width: 280px) and (max-width: 1200px){
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+
+  .imgdiv{
+   img{
+    width: 10rem;
+    height: 15rem;
+   }
+  }
+
+  .textdiv{
+   text-align: center;
+   h3{
+    width: 100%;
+    font-size: 3rem;
+   }
+   p{
+    width: 100%;
+    /* font-size: 1.3rem; */
+    text-align: center;
+    line-height: 1.3;
    }
   }
  }

@@ -215,5 +215,20 @@ const Forms = styled.form`
    }
   }
  }
+
+ /* for mobile landscape view */
+ @media (min-width: 280px) and (max-width: 568px){
+  input,
+ select,
+ textarea{
+  font-size: 1rem;
+ }
+  .details{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: left;
+  }
+ }
 `;
 export default Form;

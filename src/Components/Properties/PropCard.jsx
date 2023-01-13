@@ -87,6 +87,15 @@ const PropertiesCard = styled.div`
    gap: .3rem;
   }
  }
+
+ @media (min-width: 280px) and (max-width: 768px){
+  width: 85%;
+  
+ }
+ /* for tablets and landscape view */
+ @media (min-width: 931px) and (max-width: 1200px){
+  width: 90%;
+ }
 `;
 
 export default PropCard;

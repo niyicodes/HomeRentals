@@ -39,5 +39,14 @@ font-family: "Inter", sans-serif;
    padding-bottom: 1rem;
   }
  }
+
+ /* for mobile landscape view */
+ @media (min-width: 280px) and (max-width: 568px){
+  .addaproperty{
+   margin: 1rem;
+   padding: 1rem;
+   width: 95%;
+  }
+ }
 `;
 export default NewProperty;
