@@ -1,10 +1,11 @@
+import { motion } from "framer-motion";
 import React from "react";
 import styled from "styled-components";
 import OfferCard from "../Offer/Offer";
 import offer from "./Offer";
 
-
 const WeOffer = () => {
+ const transition = { type: "spring", duration: 2 };
  return (
   <Offerings>
    <h2>
@@ -14,15 +15,13 @@ const WeOffer = () => {
     <figure>
      <img src="/img/Hero.jpg" alt="" />
     </figure>
-    <div className="details">
-     {
-      offer.map(({image, title}) => {
-       return(
-        <OfferCard key={title} image={image} title={title}/>
-       )
-      })
-     }
-    </div>
+    <motion.div className="details" initial={{ opacity: 0, y: -100 }}
+      transition={{ ...transition, duration: 2 }}
+      whileInView={{ opacity: 1, y: 0 }}>
+     {offer.map(({ image, title }) => {
+      return <OfferCard key={title} image={image} title={title} />;
+     })}
+    </motion.div>
    </div>
   </Offerings>
  );
@@ -66,29 +65,29 @@ const Offerings = styled.section`
   }
  }
  /* for mobile landscape view */
- @media (min-width: 280px) and (max-width: 1023px){
+ @media (min-width: 280px) and (max-width: 1023px) {
   margin: 2rem;
 
-  h2{
+  h2 {
    font-size: 1.3rem;
    /* text-align: center; */
    line-height: 1.5;
   }
 
-  .offers{
+  .offers {
    margin-top: 2rem;
    flex-direction: column;
    align-items: center;
 
-   figure{
+   figure {
     width: 100%;
-    img{
+    img {
      width: 100%;
      height: 100%;
     }
    }
 
-   .details{
+   .details {
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -101,24 +100,24 @@ const Offerings = styled.section`
  }
 
  /* for landscape view and laptops */
- @media (min-width: 769px) and (max-width: 1023px){
-  margin:2rem ;
+ @media (min-width: 769px) and (max-width: 1023px) {
+  margin: 2rem;
 
-  h2{
+  h2 {
    font-size: 1.5rem;
   }
 
-  .offers{
+  .offers {
    margin-top: 2rem;
   }
  }
  /* for landscape view and laptops */
- @media (min-width: 1024px) and (max-width: 1280px){
+ @media (min-width: 1024px) and (max-width: 1280px) {
   margin: 3rem;
 
-  .offers{
+  .offers {
    gap: 1rem;
-   .details{
+   .details {
     column-gap: 2rem;
     grid-row-gap: 3rem;
    }

@@ -18,7 +18,6 @@ const Card = styled.div`
  font-family: "Inter", sans-serif;
  img {
   width: 70px;
-  
  }
  p {
   font-size: 1.7rem;
@@ -26,19 +25,19 @@ const Card = styled.div`
   font-weight: 600;
  }
  /* for mobile landscape view */
- @media (min-width: 280px) and (max-width: 1023px){
+ @media (min-width: 280px) and (max-width: 1023px) {
   align-items: center;
-  img{
+  img {
    width: 50px;
   }
-  p{
+  p {
    font-size: 1.2rem;
    text-align: center;
   }
  }
  /* for landscape view and laptops */
- @media (min-width: 1024px) and (max-width: 1280px){
-  p{
+ @media (min-width: 1024px) and (max-width: 1280px) {
+  p {
    font-size: 1.3rem;
    text-align: left;
   }

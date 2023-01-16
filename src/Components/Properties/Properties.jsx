@@ -4,12 +4,13 @@ import Button from "../Button/Button";
 import PropCard from "./PropCard";
 import ReactPaginate from "react-paginate";
 import property from "./property";
+import { motion } from "framer-motion";
 
 const Properties = () => {
  // a state to store the properties
  const [properties, setProperties] = useState(property.slice(0, 16));
  const [pageNumber, setPageNumber] = useState(0);
- // number of properties to be displayed 
+ // number of properties to be displayed
  const propertyPerPage = 6;
  // to determine the number of properties displayed or to be displayed
  const pagesVisited = pageNumber * propertyPerPage;
@@ -37,6 +38,8 @@ const Properties = () => {
  const handlePageChange = ({ selected }) => {
   setPageNumber(selected);
  };
+ // framer motion
+ const transition = { type: "spring", duration: 1.5 };
  return (
   <Prop>
    <div className="top">
@@ -46,7 +49,14 @@ const Properties = () => {
     <Button name="View all property" />
    </div>
    <main className="properties">
-    <div className="propertyarea">{displayProperties}</div>
+    <motion.div
+     className="propertyarea"
+     initial={{ opacity: 0, scale: 0.85 }}
+     transition={{ ...transition, duration: 1.2 }}
+     whileInView={{ opacity: 1, scale: 1 }}
+    >
+     {displayProperties}
+    </motion.div>
     <div className="paginationarea">
      <ReactPaginate
       breakLabel="..."
@@ -85,7 +95,7 @@ const Prop = styled.section`
   button {
    background-color: #f4511e;
    font-size: 1.2rem;
-   padding: .7rem 2rem;
+   padding: 0.7rem 2rem;
    text-transform: capitalize;
    &:after {
     background-color: #23a6f0;
@@ -119,42 +129,42 @@ const Prop = styled.section`
     padding: 10px;
     margin: 8px;
     border-radius: 5px;
-    border: 2px solid #E9E9E9;
-    color: #F4511E;
+    border: 2px solid #e9e9e9;
+    color: #f4511e;
     cursor: pointer;
    }
 
    .paginationsBtn a:hover {
     color: white;
-    background-color: #F4511E;
+    background-color: #f4511e;
    }
 
    .paginationActive a {
     color: white;
-    background-color: #F4511E;
+    background-color: #f4511e;
    }
   }
  }
 
  /* for mobile landscape view */
- @media (min-width: 280px) and (max-width: 480px){
-  .top{
+ @media (min-width: 280px) and (max-width: 480px) {
+  .top {
    flex-direction: column;
    gap: 2rem;
    justify-content: space-evenly;
    margin-top: 1rem;
    padding: 0.5rem;
 
-   h3{
+   h3 {
     line-height: 1.4;
    }
-   button{
+   button {
     font-size: 0.6rem;
     padding: 1rem;
    }
   }
-  .properties{
-   .propertyarea{
+  .properties {
+   .propertyarea {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -164,28 +174,28 @@ const Prop = styled.section`
   }
  }
 
-  /* for tablets and landscape view */
-  @media (min-width: 481px) and (max-width: 930px){
-   .properties{
-    .propertyarea{
-     display: grid;
-     grid-template-columns: repeat(2, auto);
-     gap: 1rem;
-     place-items: center;
-    }
+ /* for tablets and landscape view */
+ @media (min-width: 481px) and (max-width: 930px) {
+  .properties {
+   .propertyarea {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+    place-items: center;
    }
   }
+ }
 
-  @media (min-width: 931px) and (max-width: 1200px){
-   .properties{
-    .propertyarea{
-     grid-template-columns: repeat(3, auto);
-     gap: .5rem;
-     grid-row-gap: 1.5rem;
-     place-items: center;
-     /* width: 95%; */
-    }
+ @media (min-width: 931px) and (max-width: 1200px) {
+  .properties {
+   .propertyarea {
+    grid-template-columns: repeat(3, auto);
+    gap: 0.5rem;
+    grid-row-gap: 1.5rem;
+    place-items: center;
+    /* width: 95%; */
    }
   }
+ }
 `;
 export default Properties;

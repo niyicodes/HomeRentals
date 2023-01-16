@@ -3,7 +3,16 @@ import styled from "styled-components";
 import { MdOutlineKingBed, MdOutlineBathtub } from "react-icons/md";
 import { CgHashtag } from "react-icons/cg";
 
-const PropCard = ({ name, hometype, image, price, bed, bath, squarefeet, id }) => {
+const PropCard = ({
+ name,
+ hometype,
+ image,
+ price,
+ bed,
+ bath,
+ squarefeet,
+ id,
+}) => {
  return (
   <PropertiesCard>
    <img src={image} alt="prop image" />
@@ -40,7 +49,7 @@ const PropertiesCard = styled.div`
  overflow: hidden;
  -webkit-box-shadow: 1px 2px 21px 0px rgba(0, 0, 0, 0.66);
  box-shadow: 1px 2px 21px 0px rgba(0, 0, 0, 0.66);
- &:hover{
+ &:hover {
   transform: scale(1.1);
   cursor: pointer;
   z-index: 300;
@@ -74,26 +83,25 @@ const PropertiesCard = styled.div`
   width: 100%;
   position: absolute;
   bottom: 0;
-  border-top: 3px solid #E4E4E4;
+  border-top: 3px solid #e4e4e4;
   display: flex;
   justify-content: space-around;
-  padding:1rem 0;
+  padding: 1rem 0;
   font-family: "DM Sans", sans-serif;
 
-  .feature{
+  .feature {
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: .3rem;
+   gap: 0.3rem;
   }
  }
 
- @media (min-width: 280px) and (max-width: 768px){
+ @media (min-width: 280px) and (max-width: 768px) {
   width: 85%;
-  
  }
  /* for tablets and landscape view */
- @media (min-width: 931px) and (max-width: 1200px){
+ @media (min-width: 931px) and (max-width: 1200px) {
   width: 90%;
  }
 `;

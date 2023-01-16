@@ -10,3 +10,10 @@ font-family: 'Poppins', sans-serif;
 3. For laptops: 769px to 1024px
 
 4. For desktops: 1025px to 1200px
+
+
+const transition = { type: "spring", duration: 3 };
+
+initial={{ opacity: 0, x: -100 }}
+      transition={{ ...transition, duration: 3 }}
+      whileInView={{ opacity: 1, x: 0 }}
