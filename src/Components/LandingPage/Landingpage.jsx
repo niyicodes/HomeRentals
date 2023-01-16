@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Navbar from "../Navbar/Navbar";
 
 const Landingpage = () => {
- const transition = { type: "spring", duration: 3 };
+ const transition = { type: "spring", duration: 2 };
  return (
   <LandingPage>
    <Navbar />
@@ -12,7 +12,7 @@ const Landingpage = () => {
     <div className="text">
      <motion.h3
       initial={{ opacity: 0, x: "-100" }}
-      transition={{ ...transition, duration: 3 }}
+      transition={{ ...transition, duration: 2, delay:0.2 }}
       whileInView={{ opacity: 1, x: 0 }}
      >
       The most affortable place to stay in the san franciso bay area
