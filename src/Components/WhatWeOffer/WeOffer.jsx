@@ -5,7 +5,7 @@ import OfferCard from "../Offer/Offer";
 import offer from "./Offer";
 
 const WeOffer = () => {
- const transition = { type: "spring", duration: 2 };
+ const transition = { type: "spring", duration: 1.5 };
  return (
   <Offerings>
    <h2>
@@ -16,7 +16,7 @@ const WeOffer = () => {
      <img src="/img/Hero.jpg" alt="" />
     </figure>
     <motion.div className="details" initial={{ opacity: 0, y: -100 }}
-      transition={{ ...transition, duration: 2 }}
+      transition={{ ...transition, duration: 1 }}
       whileInView={{ opacity: 1, y: 0 }}>
      {offer.map(({ image, title }) => {
       return <OfferCard key={title} image={image} title={title} />;
