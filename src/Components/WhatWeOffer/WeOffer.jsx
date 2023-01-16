@@ -15,9 +15,12 @@ const WeOffer = () => {
     <figure>
      <img src="/img/Hero.jpg" alt="" />
     </figure>
-    <motion.div className="details" initial={{ opacity: 0, y: -100 }}
-      transition={{ ...transition, duration: 1 }}
-      whileInView={{ opacity: 1, y: 0 }}>
+    <motion.div
+     className="details"
+     initial={{ opacity: 0, y: -100 }}
+     transition={{ ...transition, duration: 1, delay: 0.2 }}
+     whileInView={{ opacity: 1, y: 0 }}
+    >
      {offer.map(({ image, title }) => {
       return <OfferCard key={title} image={image} title={title} />;
      })}
