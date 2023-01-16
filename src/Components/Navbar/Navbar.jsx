@@ -11,11 +11,7 @@ const Navbar = () => {
  const closeMobileMenu = () => setClick(false);
  const transition = { type: "spring", duration: 3 };
  return (
-  <motion.header
-   initial={{ opacity: 0, y: -100 }}
-   transition={{ ...transition, duration: 1.5 }}
-   whileInView={{ opacity: 1, y: 0 }}
-  >
+  <header>
    <nav className="navbar">
     <Link to="/" className="navbar-logo">
      <img src={Logo} alt="" />
@@ -24,11 +20,11 @@ const Navbar = () => {
      <i className={click ? "fas fa-times" : "fas fa-bars"} />
     </div>
     <ul className={click ? "nav-menu active" : "nav-menu"}>
-     <motion.li className="nav-item">
+     <li className="nav-item">
       <Link to="/" className="nav-links" onClick={closeMobileMenu}>
        Home
       </Link>
-     </motion.li>
+     </li>
      <li className="nav-item">
       <Link to="/landord" className="nav-links" onClick={closeMobileMenu}>
        Landlord
@@ -49,7 +45,7 @@ const Navbar = () => {
      </div>
     </ul>
    </nav>
-  </motion.header>
+  </header>
  );
 };
 
