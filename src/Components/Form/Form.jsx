@@ -230,5 +230,14 @@ const Forms = styled.form`
    align-items: left;
   }
  }
+
+ /* for tablets */
+ @media (min-width: 569px) and (max-width: 1024px){
+  .details{
+   display: grid;
+   grid-template-columns: repeat(2,auto);
+  }
+ }
+
 `;
 export default Form;

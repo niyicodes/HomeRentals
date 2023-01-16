@@ -98,6 +98,7 @@ const FooterComponent = styled.footer`
  justify-content: center;
  gap: 2rem;
  width: 100%;
+ font-family: "Inter", sans-serif;
 
  .icons{
   color: #F4511E;
@@ -154,6 +155,76 @@ const FooterComponent = styled.footer`
   ul li a{
    padding-right: 1rem;
    color: black;
+  }
+ }
+
+ @media (min-width: 280px) and (max-width: 568px){
+margin: 1rem;
+padding: .5rem;
+/* align-items: center; */
+width: 95%;
+
+.top{
+ flex-direction: column;
+ justify-content: center;
+ .topleft{
+  display: flex;
+  justify-content: center;
+  
+  img{
+   width: 95%;
+  }
+ }
+
+ .topright{
+  .div{
+   font-size: 1.4rem;
+   align-items: left;
+   /* text-align: center; */
+  }
+  .div-2{
+   flex-direction: column;
+   align-items: left;
+   gap: .5rem;
+  }
+
+  .socials{
+   flex-direction: column;
+  }
+ }
+}
+
+.bottom{
+ flex-direction: column;
+ gap: 2rem;
+ align-items: left;
+ font-size: 1rem;
+ font-weight: 400;
+
+ ul{
+  flex-direction: column;
+  gap: .5rem;
+ }
+}
+ }
+ @media (min-width: 569px) and (max-width: 1024px){
+  .top{
+   justify-content: space-between;
+   font-size: 1.1rem;
+
+   .div-2{
+    flex-direction: column;
+    gap: 1rem;
+   }
+
+   .socials{
+    flex-direction: column;
+   }
+  }
+
+  .bottom{
+   flex-direction: column;
+   gap: 1rem;
   }
  }
 `;

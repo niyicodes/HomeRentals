@@ -41,7 +41,7 @@ font-family: "Inter", sans-serif;
  }
 
  /* for mobile landscape view */
- @media (min-width: 280px) and (max-width: 568px){
+ @media (min-width: 280px) and (max-width: 1024px){
   .addaproperty{
    margin: 1rem;
    padding: 1rem;

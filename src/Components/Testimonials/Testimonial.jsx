@@ -44,5 +44,12 @@ const Testimonials = styled.section`
   width: 100%;
  }
  }
+
+ @media (min-width: 569px) and (max-width: 1024px){
+  margin-top: 2rem;
+  height: 100%;
+  width: 100%;
+ }
+
 `;
 export default Testimonial;
