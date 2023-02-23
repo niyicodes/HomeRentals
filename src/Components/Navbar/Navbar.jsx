@@ -26,17 +26,17 @@ const Navbar = () => {
       </Link>
      </li>
      <li className="nav-item">
-      <Link to="/landord" className="nav-links" onClick={closeMobileMenu}>
+      <Link to="/" className="nav-links" onClick={closeMobileMenu}>
        Landlord
       </Link>
      </li>
      <li className="nav-item">
-      <Link to="/tenant" className="nav-links" onClick={closeMobileMenu}>
+      <Link to="/" className="nav-links" onClick={closeMobileMenu}>
        Tenants
       </Link>
      </li>
      <li className="nav-item">
-      <Link to="/contact-us" className="nav-links" onClick={closeMobileMenu}>
+      <Link to="/" className="nav-links" onClick={closeMobileMenu}>
        Contact Us
       </Link>
      </li>
